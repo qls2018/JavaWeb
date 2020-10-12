@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // alert($("div").html());
+            // $("div").html("<h1>我是DiV中的标题 1</h1>");
+            // alert($("div").text());
+            // $("div").text("<h1>我是DiV中的标题 1</h1>");
+            $("button").click(function () {
+                alert($("#username").val());
+                $("#username").val("超级程序员");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div>我是div标签 <span>我是div中的span</span></div>
+    <input type="text" name="username" id="username" />
+    <button>操作输入框</button>
+</body>
+</html>

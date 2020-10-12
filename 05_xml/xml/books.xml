@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    xml的声明
+-->
+<book>
+    <book sn="SN2342345">
+        <name>时间简史</name>
+        <author>霍金</author>
+        <price>75</price>
+    </book>
+    <book sn="SN23421233">
+        <name>java入门</name>
+        <author>撒老师</author>
+        <price>9.9</price>
+    </book>
+</book>

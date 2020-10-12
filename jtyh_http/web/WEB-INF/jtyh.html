@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>交通银行数据传输服务器</title>
+    <link type="text/css" rel="stylesheet" href="../../web/css/style1.css">
+    <script type="text/javascript">
+        var t = null;
+
+        t = setTimeout(time, 1000);//开始执行
+
+        function time() {
+
+            clearTimeout(t);//清除定时器
+
+            dt = new Date();
+
+            var y = dt.getYear() + 1900;
+
+            var mm = dt.getMonth() + 1;
+
+            var d = dt.getDate();
+
+            var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+            var day = dt.getDay();
+
+            var h = dt.getHours();
+
+            var m = dt.getMinutes();
+
+            var s = dt.getSeconds();
+
+            if (h < 10) {
+                h = "0" + h;
+            }
+
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            if (s < 10) {
+                s = "0" + s;
+            }
+
+            document.getElementById("timeShow").innerHTML = y + "年" + mm + "月" + d + "日" + weekday[day] + h + ":" + m + ":" + s + "";
+
+            t = setTimeout(time, 1000);
+
+            //设定定时器，循环执行           
+
+        }
+
+    </script>
+</head>
+
+
+<body>
+
+<div id="header">
+    <img class="logo_img" height="80" width="300" alt="" src="../images/a5.jpg">
+
+    <span class="wel_word">&nbsp;&nbsp;&nbsp;&nbsp;交通银行天津市分行</span>
+
+    <div>
+
+        <button>
+            <a href="../main1.html">登录</a>
+        </button>
+    </div>
+
+</div>
+
+<div id="main">
+    <div id="book">
+
+        <div style="text-align: center">
+            <span>欢迎登陆交通银行天津分行数据传输服务器</span>
+            <br/>
+            本服务器只用于<span style="color: red">数据临时传输</span>请勿将重要文件长期存放
+        </div>
+
+        <div class="b_list">
+            <div class="img_div">
+                <img class="book_img" alt="" src="../images/83.jpg"/>
+            </div>
+            <div class="book_info">
+                <!--<div class="book_name">-->
+                <!--<span class="sp1">书名:</span>-->
+                <!--<span class="sp2">时间简史</span>-->
+
+                <!--<div class="book_add">-->
+                <!--<button>加入购物车</button>-->
+                <!--</div>-->
+
+                <!--</div>-->
+            </div>
+        </div>
+
+        <br/>
+
+    </div>
+    <!--<div id="page_nav">-->
+    <!--<a href="#">首页</a>-->
+    <!--<a href="#">上一页</a>-->
+    <!--<a href="#">3</a>-->
+    <!--【4】-->
+    <!--<a href="#">5</a>-->
+    <!--<a href="#">下一页</a>-->
+    <!--<a href="#">末页</a>-->
+    <!--共10页，30条记录 到第<input value="4" name="pn" id="pn_input"/>页-->
+    <!--<input type="button" value="确定">-->
+    <!--</div>-->
+    <div id="timeShow" class="time1"></div>
+</div>
+
+<div id="bottom">
+		<span>
+			数据传输服务器.信息技术部自主开发 &copy;2020
+		</span>
+</div>
+
+</body>
+</html>

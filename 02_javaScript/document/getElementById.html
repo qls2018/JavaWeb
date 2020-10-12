@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onclickFun() {
+            var usernameObj = document.getElementById("username");
+            // alert(usernameObj.value);
+            //[object HTMLInputElement] 它就是DOM对象
+            var usernameText = usernameObj.value;
+            var patt = /^\w{5,12}$/;
+
+            var usernameSpanObj=document.getElementById("usernameSpan");
+            usernameSpanObj.innerHTML = "我真棒";
+            // alert(usernameSpanObj.innerHTML);
+
+
+            if(patt.test(usernameText)){
+                // usernameSpanObj.innerHTML="用户名合法!";
+                usernameSpanObj.innerHTML="<img src='right.png' width='18' height='18' align='center'/>";
+            }else{
+                // usernameSpanObj.innerHTML="用户名不合法";
+                usernameSpanObj.innerHTML="<img src='wrong.png' width='18' height='18' align='center' />";
+            }
+        }
+    </script>
+</head>
+<body>
+    用户名：<input id="username" type="text" value="sdf"/>
+    <span id="usernameSpan" style="color: red"></span>
+    <button onclick="onclickFun()">校验</button>
+</body>
+</html>
